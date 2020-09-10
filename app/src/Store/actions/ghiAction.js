@@ -10,7 +10,7 @@ export const fetchPeeps = () => {
         axios.get('https://ghibliapi.herokuapp.com/films/58611129-2dbc-4a81-a72f-77ddfc1b1b49/people')
         .then((res) =>{
             console.log(res)
-            dispatch({type: FETCH_PEOPLE_SUCCESS, payload: res.data.all});
+            dispatch({type: FETCH_PEOPLE_SUCCESS, payload: res.data});
         })
         .catch((err) =>{
             console.log(err);
